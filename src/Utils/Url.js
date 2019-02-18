@@ -1,4 +1,4 @@
-export function buildUrl(apiKey, base, path, params) {
+export function buildUrl(api_key, base, path, params) {
   params = {
     ...params,
     api_key
