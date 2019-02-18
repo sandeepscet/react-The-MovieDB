@@ -13,7 +13,13 @@ import MovieDetails from './../../pages/MovieDetails/reducer/movie-details';
 import CastDetails from './../../pages/CastDetails/reducer/cast-details';
 
 const rootReducer = combineReducers({
-  App
+  App,
+  Home,
+    Trending,
+    Popular,
+    Search,
+    MovieDetails,
+    CastDetails
 });
 
 export default rootReducer;
