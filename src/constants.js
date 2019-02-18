@@ -1,4 +1,4 @@
 export default {
-    "API_KEY" : "606fac174296dbcf5c1e7f7fe67a9e77",
+    "API_KEY" : "4f930a030b252e465b213f94b64229ae",
     "API_BASE_URL" : "https://api.themoviedb.org/3/"
 };
