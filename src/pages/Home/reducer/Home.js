@@ -1,4 +1,4 @@
-import ActionTypes from './../../../actions/index';
+import ActionTypes from "../../../actions";
 
 const initial_state = {
   page: 0,
@@ -11,8 +11,35 @@ const initial_state = {
 
 const Reducer = (state = initial_state, action) => {
   switch (action.type) {
-    default:
-      return state;
+      case ActionTypes.HOME.HOME_LOAD_DEFAULT:
+          return {
+              ...state,
+              isLoading: true,
+              isError: false
+          };
+      case ActionTypes.HOME.HOME_LOAD_DEFAULT_SUCCESS:
+          return {
+              ...state,
+              isLoading: false,
+              isError: false,
+              page: action.page,
+              total_pages: action.total_pages,
+              total_results: action.total_results,
+              recentMovies: action.results
+          };
+      case ActionTypes.HOME.HOME_LOAD_DEFAULT_FAILURE:
+          return {
+              ...state,
+              isLoading: false,
+              isError: true
+          };
+      case ActionTypes.HOME.HOME_SET_PAGE_NUMBER:
+          return {
+              ...state,
+              page: action.page
+          };
+      default:
+          return state;
   }
 };
 
