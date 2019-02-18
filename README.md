@@ -1,3 +1,7 @@
+# Deployed on herokuapp
+Link : https://react-the-moviedb.herokuapp.com/home
+
+----
 # TheMovieDb Frontend Challenge
 
 Scope of Assignment
