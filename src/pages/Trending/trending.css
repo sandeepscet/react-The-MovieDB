@@ -1,0 +1,9 @@
+.popular {
+    height: stretch;
+}
+
+.trending-title {
+    padding: 5px;
+    height: 48px;
+    font-size: 24px;
+}
