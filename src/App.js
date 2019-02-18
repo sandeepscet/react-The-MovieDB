@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Menu, Input, Grid } from 'semantic-ui-react';
 import './App.css';
+import history from './history';
 /** Import pages here **/
 import HomeContainer from './pages/Home/HomeContainer';
 import TrendingContainer from './pages/Trending/TrendingContainer';
@@ -94,3 +95,4 @@ class App extends Component {
   }
 }
 
+export default App;
