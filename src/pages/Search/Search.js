@@ -24,12 +24,13 @@ export default class Search extends Component {
         this.props._loadSearchResults(this.props.match.params.term, 1);
     }
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     if (this.props.searchTerm !== this.props.match.params.term) {
-    //         this.props._setSearchTerm(this.props.match.params.term);
-    //         this.props._loadSearchResults(this.props.match.params.term, 1);
-    //     }
-    // }
+    componentDidUpdate(prevProps, prevState) {
+         if (this.props.match.params.term !== prevProps.match.params.term) {
+             this.props._setSearchTerm(this.props.match.params.term);
+             this.props._loadSearchResults(this.props.match.params.term, 1);
+         }
+     }
+    
 
     onMovieClick = (movie) => {
         this.props.history.push(`/movie/${movie.id}`);
