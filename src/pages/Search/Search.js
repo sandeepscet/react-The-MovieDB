@@ -57,18 +57,23 @@ export default class Search extends Component {
                         <div className="home-title">
                             Search Results for : {this.props.match.params.term}
                         </div>
-                        <div className="pagination-container">
-                            <Pagination
-                                defaultActivePage={this.props.page}
-                                ellipsisItem={{ content: <Icon name='ellipsis horizontal' />, icon: true }}
-                                firstItem={{ content: <Icon name='angle double left' />, icon: true }}
-                                lastItem={{ content: <Icon name='angle double right' />, icon: true }}
-                                prevItem={{ content: <Icon name='angle left' />, icon: true }}
-                                nextItem={{ content: <Icon name='angle right' />, icon: true }}
-                                totalPages={this.props.total_pages}
-                                onPageChange={this.onPageChange}
-                            />
-                        </div>
+                        {isEmpty(this.props.results) &&
+                            <div>No records found. Please try with another term.</div>
+                        }
+                        {!isEmpty(this.props.results) &&
+                            <div className="pagination-container">
+                                <Pagination
+                                    defaultActivePage={this.props.page}
+                                    ellipsisItem={{ content: <Icon name='ellipsis horizontal' />, icon: true }}
+                                    firstItem={{ content: <Icon name='angle double left' />, icon: true }}
+                                    lastItem={{ content: <Icon name='angle double right' />, icon: true }}
+                                    prevItem={{ content: <Icon name='angle left' />, icon: true }}
+                                    nextItem={{ content: <Icon name='angle right' />, icon: true }}
+                                    totalPages={this.props.total_pages}
+                                    onPageChange={this.onPageChange}
+                                />
+                            </div>
+                        }
                         {!isEmpty(this.props.results) &&
                             <Card.Group>
                                 {this.props.results.map((movie, index) => {
