@@ -15,7 +15,7 @@ const Actions = {
                 query: searchTerm,
                 language: "en-US",
                 include_adult: false,
-                page: 1
+                page: page
             };
 
             const url = buildUrl(constants.API_KEY, constants.API_BASE_URL, "search/movie", params);
