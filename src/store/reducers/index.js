@@ -6,7 +6,7 @@ import App from './app';
  * I didn't ported it yet to React 16 api's but its example would describe exact modularity case
  * */
 import Home from './../../pages/Home/reducer/Home';
-import Trending from './../../pages/Trending/reducer/tredning';
+import Trending from './../../pages/Trending/reducer/trending';
 import Popular from './../../pages/Popular/reducer/popular';
 import Search from './../../pages/Search/reducer/search';
 import MovieDetails from './../../pages/MovieDetails/reducer/movie-details';
