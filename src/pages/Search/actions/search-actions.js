@@ -10,7 +10,7 @@ const Actions = {
     _loadSearchResults: (searchTerm, page) => async (dispatch) => {
         try {
             dispatch({ type: ActionTypes.SEARCH.SEARCH_LOAD_DEFAULT});
-            //TODO: check if query is empty and block on UI
+            
             const params = {
                 query: searchTerm,
                 language: "en-US",

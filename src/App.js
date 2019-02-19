@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   onKeyPressSearchTerm(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && this.state.searchTerm !== '') {
       this.onSearchAction();
     }
   }
@@ -72,6 +72,7 @@ class App extends Component {
                   onChange={this.onChangeSearchTerm}
                   onKeyPress={this.onKeyPressSearchTerm}
                   value={this.state.searchTerm}
+                  required="required"
                 />
               </Menu.Item>
             </Menu>
